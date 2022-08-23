@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:orientation="vertical"
+    tools:context=".activity.activites.CardDetailsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Apptheme.Appbaroverlay">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/card_details_act"
+            android:layout_width="match_parent"
+            app:titleTextColor="@color/white"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/Apptheme.PopupOverlay"
+            android:background="?attr/colorPrimary"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="10dp"
+        android:orientation="vertical"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="50dp"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/et_name_card_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Card Name"
+                        android:textColor="@color/black"
+                        android:inputType="text"
+                        android:textSize="18dp"
+                        tools:text="Card 1" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+
+            android:layout_height="match_parent"
+            android:elevation="25dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lable Color"
+                    android:padding="1dp"
+                    android:textColor="@color/grey"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_select_label_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:padding="5dp"
+                    android:textSize="18dp"
+                    android:text="Select Color"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Members"
+                    android:padding="1dp"
+                    android:textColor="@color/grey"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_select_members"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:padding="5dp"
+                    android:textSize="18dp"
+                    android:text="Select Members"
+                    android:textColor="@color/grey" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_select_members"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    android:padding="5dp"
+                    tools:visibility="gone" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Due Date"
+                    android:padding="1dp"
+                    android:textColor="@color/grey"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tv_date_selcted"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:padding="5dp"
+                    android:visibility="visible"
+                    android:textSize="18dp"
+                    android:text="Select Due Date"
+                    android:textColor="@color/black" />
+
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:text="Update"
+                    android:id="@+id/card_update_btn"
+
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/siignin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:fontFamily="@font/inder"
+                    android:elevation="10dp"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

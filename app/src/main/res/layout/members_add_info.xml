@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="18dp"
+            android:id="@+id/title_add_members"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/darkblue"
+            android:fontFamily="@font/inder"
+            android:layout_margin="10dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="25dp"
+            android:id="@+id/data_member_email_add"
+            app:layout_constraintTop_toBottomOf="@+id/title_add_members"
+            android:textColor="@color/grey"
+            android:fontFamily="@font/inder"
+            android:layout_marginTop="10dp"
+            android:inputType="textEmailAddress"
+            android:hint="XYZ@gmail.com"
+            app:layout_constraintStart_toStartOf="parent"
+
+            android:textSize="18dp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.153"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/data_member_email_add"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cancel_edit_btn_mem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inder"
+                android:text="Cancel"
+                android:background="@android:color/transparent"
+                android:textColor="@color/darkblue"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/save_edit_btn_mem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inder"
+                android:text="Save"
+                android:background="@android:color/transparent"
+                android:textColor="@color/darkblue"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
